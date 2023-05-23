@@ -16,7 +16,7 @@ const App = ()=> {
         <Router>
    <NavBar/>
    <Routes>
-<Route element={<ErrorPage/>} />
+<Route path='*' element={<ErrorPage/>} />
 <Route exact path='/' element={<News key="general" pageSize={9} country="in" category="general" />} />
 <Route exact path='/business' element={<News key="business" pageSize={9} country="in" category="business"/>} />
 <Route exact path='/entertainment' element={<News key="entertainment" pageSize={9} country="in" category="entertainment" />} />

@@ -1,12 +1,13 @@
 import React from 'react';
 
-const ErrorPage = () => {
-  return (
-    <div>
-      <h1>404 Error: Page Not Found</h1>
-      <p>Sorry, the page you are looking for does not exist.</p>
-    </div>
-  );
-};
+import { Link } from "react-router-dom";
 
-export default ErrorPage;
+export default function NotFound() {
+  return (
+    <div className='mt-5 error' >
+      <h1>Oops! You seem to be lost.</h1>
+      <p>Here are some helpful links:</p>
+      <Link to='/'>Home</Link>
+    </div>
+  )
+}
