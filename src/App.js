@@ -9,13 +9,14 @@ import {
 import NavBar from './component/NavBar';
 import News from './component/News';
 import Footer from './component/Footer';
-
+import ErrorPage from './pages/ErrorPage';
 const App = ()=> {
     return (
       <div>
         <Router>
    <NavBar/>
    <Routes>
+<Route element={<ErrorPage/>} />
 <Route exact path='/' element={<News key="general" pageSize={9} country="in" category="general" />} />
 <Route exact path='/business' element={<News key="business" pageSize={9} country="in" category="business"/>} />
 <Route exact path='/entertainment' element={<News key="entertainment" pageSize={9} country="in" category="entertainment" />} />
